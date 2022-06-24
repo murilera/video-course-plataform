@@ -3,6 +3,9 @@
 # web
 
 - vite
+- tailwind css
+- phosphoricons.com
+- date-fns
 
 # server
 
