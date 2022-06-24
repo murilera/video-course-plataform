@@ -6,6 +6,8 @@
 - tailwind css
 - phosphoricons.com
 - date-fns
+- vimejs
+- apollo-client
 
 # server
 
