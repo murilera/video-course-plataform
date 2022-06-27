@@ -1,6 +1,6 @@
 # video-course-plataform
 
-deployed at: [https://video-course-plataform.vercel.app/]
+deployed at: [https://video-course-plataform.vercel.app/](https://video-course-plataform.vercel.app/)
 
 # web (client)
 
