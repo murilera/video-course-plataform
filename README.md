@@ -1,5 +1,7 @@
 # video-course-plataform
 
+deployed at: [https://video-course-plataform.vercel.app/]
+
 # web (client)
 
 - vite
