@@ -11,7 +11,7 @@ interface LessonProps {
   type: 'live' | 'class'
 }
 
-const capitalizeFirstLetter = (string) => {
+const capitalizeFirstLetter = (string: any) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
