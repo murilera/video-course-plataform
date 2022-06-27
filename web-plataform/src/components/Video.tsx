@@ -7,49 +7,20 @@ import {
 
 import { Player, Youtube, DefaultUi } from '@vime/react'
 import '@vime/core/themes/default.css'
-import { gql, useQuery } from '@apollo/client'
-
-const GET_LESSON_BY_SLUG_QUERY = gql`
-  query GetLessonBySlug($slug: String) {
-    lesson(where: { slug: $slug }) {
-      id
-      title
-      teacher {
-        avatarURL
-        bio
-        name
-      }
-      videoId
-      description
-    }
-  }
-`
-
-interface GetLessonBySlugResponse {
-  lesson: {
-    title: string
-    videoId: string
-    description: string
-    teacher: {
-      bio: string
-      avatarURL: string
-      name: string
-    }
-  }
-}
+import { useGetLessonBySlugQuery } from '../graphql/generated'
 
 interface VideoProps {
   lessonSlug: string
 }
 
 export const Video = (props: VideoProps) => {
-  const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
+  const { data } = useGetLessonBySlugQuery({
     variables: {
       slug: props.lessonSlug
     }
   })
 
-  if (!data) {
+  if (!data || !data.lesson) {
     return (
       <div className='flex-1'>
         <p>Carregando...</p>
