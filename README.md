@@ -1,6 +1,6 @@
 # video-course-plataform
 
-# web
+# web (client)
 
 - vite
 - tailwind css
@@ -9,8 +9,11 @@
 - vimejs
 - apollo-client
 
-# server
-
 # database
 
 - graphcms (GraphQL)
+- graphQl-code-generator.com
+
+# deploy
+
+- vercel
